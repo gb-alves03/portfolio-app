@@ -10,7 +10,7 @@ interface Project {
   };
   image: string;
   technologies: string[];
-  liveLink: string;
+  //liveLink: string;
   codeLink: string;
 }
 
@@ -25,7 +25,7 @@ interface Project {
         <p class="section-description">
           {{ translate('projects.description') }}
         </p>
-        
+        <br>
         <div class="projects-grid">
           @for (project of projects; track project.title) {
             <div class="project-card">
@@ -43,9 +43,9 @@ interface Project {
                   }
                 </div>
                 <div class="project-links">
-                  <a [href]="project.liveLink" target="_blank" class="btn btn-sm">
+                  <!-- <a [href]="project.liveLink" target="_blank" class="btn btn-sm">
                     <i class="fas fa-external-link-alt"></i> Live
-                  </a>
+                  </a> -->
                   <a [href]="project.codeLink" target="_blank" class="btn btn-sm btn-outline">
                     <i class="fab fa-github"></i> Code
                   </a>
@@ -164,35 +164,35 @@ export class ProjectsComponent {
     {
       title: 'E-Commerce Website',
       description: {
-        'en-US': 'A fully responsive e-commerce platform with product filtering, cart functionality, and payment integration.',
-        'pt-BR': 'Uma plataforma de e-commerce totalmente responsiva com filtragem de produtos, funcionalidade de carrinho e integração de pagamento.'
+        'en-US': 'E-commerce Back-end project based in Events-Driven, Hexagonal and Microservices Architectures. The project has the following services, Customer, Products, Order, Notification, Payment and uses SAGA Pattern to compensate the transactions',
+        'pt-BR': 'Projeto de back-end de um E-commerce baseado nas arquiteturas orientada a eventos, hexagonal e de microsserviços. O projeto tem os seguintes serviços, Cliente, Produtos, Pedido, Notificação, Pagamento e utiliza o padrão SAGA para compensar as transações.'
       },
-      image: 'https://via.placeholder.com/600x400',
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'MongoDB'],
-      liveLink: '#',
-      codeLink: '#'
+      image: '/assets/img/ecommerce.png',
+      technologies: ['Java', 'Spring Boot', 'Spring Security', 'Spring Cloud', 'AWS', 'Postgres', 'MongoDB'],
+      //liveLink: '#',
+      codeLink: 'https://github.com/gb-alves03/ecommerce-microservices-architecture'
     },
     {
-      title: 'Task Management App',
+      title: 'Docker Manager',
       description: {
-        'en-US': 'A productivity application for managing tasks with drag-and-drop functionality and team collaboration features.',
-        'pt-BR': 'Um aplicativo de produtividade para gerenciar tarefas com funcionalidade de arrastar e soltar e recursos de colaboração em equipe.'
+        'en-US': 'A backend application that allows you to manage containers and images in Docker and publish them to Docker Hub.',
+        'pt-BR': 'Uma aplicação backend que permite gerenciar containeres e imagens no Docker além de publicar no Docker Hub.'
       },
-      image: 'https://via.placeholder.com/600x400',
-      technologies: ['React', 'Redux', 'Firebase', 'Material UI'],
-      liveLink: '#',
-      codeLink: '#'
+      image: '/assets/img/docker.png',
+      technologies: ['Kotlin', 'Spring Boot', 'Apache HTTP Client', 'Docker API'],
+      //liveLink: '#',
+      codeLink: 'https://github.com/gb-alves03/docker-manager'
     },
     {
-      title: 'Weather Dashboard',
+      title: 'Biometric Recognition Tool',
       description: {
-        'en-US': 'A weather application that displays current and forecasted weather data for any location using a third-party API.',
-        'pt-BR': 'Um aplicativo meteorológico que exibe dados meteorológicos atuais e previstos para qualquer localização usando uma API de terceiros.'
+        'en-US': 'Biometric Recognition Tool is a biometric recognition tool developed in Kotlin. The project uses advanced image processing algorithms, such as SIFT (Scale-Invariant Feature Transform) and FLANN (Fast Library for Approximate Nearest Neighbors), integrated into a command line interface (CLI) to allow user interaction.',
+        'pt-BR': 'A Biometric Recognition Tool é uma ferramenta de reconhecimento biométrico desenvolvida em Kotlin. O projeto usa algoritmos avançados de processamento de imagens, como SIFT (Scale-Invariant Feature Transform) e FLANN (Fast Library for Approximate Nearest Neighbors), integrados a uma interface de linha de comando (CLI) para permitir a interação do usuário.'
       },
-      image: 'https://via.placeholder.com/600x400',
-      technologies: ['JavaScript', 'HTML', 'CSS', 'OpenWeather API'],
-      liveLink: '#',
-      codeLink: '#'
+      image: '/assets/img/biometry.jpg',
+      technologies: ['Kotlin', 'OpenCV', 'Postgres'],
+      //liveLink: '#',
+      codeLink: 'https://github.com/gb-alves03/biometric-recognition-tool'
     }
   ];
   
