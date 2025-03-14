@@ -15,7 +15,7 @@ import { TranslationService } from '../../services/translation.service';
         <p class="hero-description">
           {{ translate('hero.description') }}
         </p>
-        <a href="assets/Gabriel Henrique Alves - Resume (PT-BR).pdf" download class="btn hero-cta">
+        <a href="/assets/cv/Gabriel Henrique Alves - Resume (PT-BR).pdf" download class="btn hero-cta">
           <i class="fas fa-download"></i> {{ translate('hero.downloadCV') }}
         </a>
       </div>
