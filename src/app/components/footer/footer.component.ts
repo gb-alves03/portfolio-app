@@ -16,7 +16,7 @@ import { TranslationService } from '../../services/translation.service';
           <div class="footer-social">
             <a href="https://www.linkedin.com/in/gabriel-henrique-alves-dev/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/gb-alves03" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/gb_alves6/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
