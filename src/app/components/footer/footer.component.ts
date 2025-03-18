@@ -15,4 +15,5 @@ export class FooterComponent {
   translate(key: string): string {
     return this.translationService.translate(key);
   }
+  
 }
