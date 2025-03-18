@@ -1,0 +1,33 @@
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <h2 class="section-title">{{ translate('projects.title') }}</h2>
+        <p class="section-description">
+            {{ translate('projects.description') }}
+        </p>
+        <br>
+        <div class="projects-grid">
+            <div *ngFor="let project of projects; trackBy: trackByTitle" class="project-card">
+                <div class="project-image">
+                    <img [src]="project.image" [alt]="project.title" />
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">
+                        {{ project.description[currentLang] }}
+                    </p>
+                    <div class="project-tech">
+                        <span *ngFor="let tech of project.technologies; trackBy: trackByTech" class="tech-tag">{{ tech }}</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- <a [href]="project.liveLink" target="_blank" class="btn btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live
+                </a> -->
+                        <a [href]="project.codeLink" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+<header class="header" [class.scrolled]="scrolled">
+    <div class="container header-content">
+        <div class="logo">
+            <span class="name">Gabriel Henrique Alves</span>
+        </div>
+
+        <nav class="nav-menu" [class.active]="mobileMenuOpen">
+            <ul>
+                <li><a href="#home" (click)="closeMobileMenu()">{{ translate('nav.home') }}</a></li>
+                <li><a href="#about" (click)="closeMobileMenu()">{{ translate('nav.about') }}</a></li>
+                <li><a href="#skills" (click)="closeMobileMenu()">{{ translate('nav.skills') }}</a></li>
+                <li><a href="#projects" (click)="closeMobileMenu()">{{ translate('nav.projects') }}</a></li>
+                <li><a href="#contact" (click)="closeMobileMenu()">{{ translate('nav.contact') }}</a></li>
+            </ul>
+
+            <div class="mobile-controls">
+                <button class="theme-toggle" (click)="toggleTheme()">
+                    <i [class]="isDarkTheme ? 'fas fa-sun' : 'fas fa-moon'"></i>
+                    {{ isDarkTheme ? translate('theme.light') : translate('theme.dark') }}
+                </button>
+
+                <button class="lang-toggle" (click)="toggleLanguage()">
+                    {{ currentLang === 'en-US' ? 'PT-BR' : 'EN-US' }}
+                </button>
+            </div>
+        </nav>
+
+        <div class="desktop-controls">
+            <button class="theme-toggle" (click)="toggleTheme()">
+                <i [class]="isDarkTheme ? 'fas fa-sun' : 'fas fa-moon'"></i>
+            </button>
+
+            <button class="lang-toggle" (click)="toggleLanguage()">
+                {{ currentLang === 'en-US' ? 'PT-BR' : 'EN-US' }}
+            </button>
+        </div>
+
+        <button class="mobile-menu-btn" (click)="toggleMobileMenu()" [attr.aria-expanded]="mobileMenuOpen">
+            <i [class]="mobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+        </button>
+    </div>
+</header>
+
+<div class="mobile-menu-overlay" *ngIf="mobileMenuOpen" (click)="closeMobileMenu()"></div>
