@@ -29,8 +29,8 @@ export class SkillsComponent {
       icon: 'fab fa-java',
       color: '#FF0000',
       description: {
-        'en-US': 'Proficient in writing semantic HTML5 markup for accessible and SEO-friendly websites.',
-        'pt-BR': 'Proficiente em escrever marcação HTML5 semântica para sites acessíveis e otimizados para SEO.'
+        'en-US': 'Experience building RESTful APIs with Spring Boot and Java.',
+        'pt-BR': 'Experiência na construção de APIs RESTful com Spring Boot e Java.'
       }
     },
     {
@@ -38,8 +38,8 @@ export class SkillsComponent {
       icon: 'fas fa-leaf',
       color: '#339933',
       description: {
-        'en-US': 'Building server-side applications with Node.js and Express.',
-        'pt-BR': 'Construção de aplicações server-side com Node.js e Express.'
+        'en-US': 'Experience building RESTful APIs with Spring Boot and Java.',
+        'pt-BR': 'Experiência na construção de APIs RESTful com Spring Boot e Java.'
       }
     },
     {
@@ -47,8 +47,8 @@ export class SkillsComponent {
       icon: 'fab fa-docker',
       color: '#264DE4',
       description: {
-        'en-US': 'Strong CSS skills including Flexbox, Grid, animations, and responsive design.',
-        'pt-BR': 'Fortes habilidades em CSS incluindo Flexbox, Grid, animações e design responsivo.'
+        'en-US': 'Containerizing applications with Docker and Docker Compose.',
+        'pt-BR': 'Containerizando aplicações com Docker e Docker Compose.'
       }
     },
     {
@@ -56,8 +56,8 @@ export class SkillsComponent {
       icon: 'fab fa-aws',
       color: '#F7DF1E',
       description: {
-        'en-US': 'Advanced JavaScript including ES6+ features, async programming, and DOM manipulation.',
-        'pt-BR': 'JavaScript avançado incluindo recursos ES6+, programação assíncrona e manipulação do DOM.'
+        'en-US': 'Deploying applications to AWS using services like EC2, Lambda, and RDS.',
+        'pt-BR': 'Implantando aplicações na AWS usando serviços como EC2, Lambda e RDS.'
       }
     },
     {
@@ -83,8 +83,8 @@ export class SkillsComponent {
       icon: 'fab fa-github',
       color: '#4B0082',
       description: {
-        'en-US': 'Creating interactive UIs with React and its ecosystem.',
-        'pt-BR': 'Criação de interfaces interativas com React e seu ecossistema.'
+        'en-US': 'Version control and collaboration using Git and GitHub.',
+        'pt-BR': 'Controle de versão e colaboração usando Git e GitHub.'
       }
     },
     {

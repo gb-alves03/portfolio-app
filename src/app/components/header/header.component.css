@@ -23,16 +23,15 @@
 
 .logo {
     display: flex;
+    position: relative;
     align-items: center;
     gap: 10px;
-    z-index: 1001;
+    z-index: 1002;
 }
 
-.avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+.nav-menu {
+    z-index: 1001;
+    margin-right: 10px;
 }
 
 .name {
@@ -176,7 +175,34 @@
         padding: 12px;
     }
 
-    .mobile-menu-overlay {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .header .logo .name {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .header .nav-menu {
+        padding: 10px;
+    }
+
+    .header .desktop-controls {
+        margin-right: 10px;
+    }
+
+    .header .mobile-controls {
+        margin-right: 10px;
+    }
+
+    .header .theme-toggle,
+    .header .lang-toggle {
+        margin: 0 5px;
+    }
+
+    .mobile-menu-overlay.active {
         display: block;
+        opacity: 1;
     }
 }
