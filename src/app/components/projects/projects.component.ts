@@ -18,143 +18,8 @@ interface Project {
   selector: 'app-projects',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <section id="projects" class="section projects-section">
-      <div class="container">
-        <h2 class="section-title">{{ translate('projects.title') }}</h2>
-        <p class="section-description">
-          {{ translate('projects.description') }}
-        </p>
-        <br>
-        <div class="projects-grid">
-          @for (project of projects; track project.title) {
-            <div class="project-card">
-              <div class="project-image">
-                <img [src]="project.image" [alt]="project.title" />
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">{{ project.title }}</h3>
-                <p class="project-description">
-                  {{ project.description[currentLang] }}
-                </p>
-                <div class="project-tech">
-                  @for (tech of project.technologies; track tech) {
-                    <span class="tech-tag">{{ tech }}</span>
-                  }
-                </div>
-                <div class="project-links">
-                  <!-- <a [href]="project.liveLink" target="_blank" class="btn btn-sm">
-                    <i class="fas fa-external-link-alt"></i> Live
-                  </a> -->
-                  <a [href]="project.codeLink" target="_blank" class="btn btn-sm btn-outline">
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          }
-        </div>
-      </div>
-    </section>
-  `,
-  styles: [`
-    .projects-section {
-      background-color: var(--bg-color);
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 40px;
-    }
-    
-    .project-card {
-      background-color: var(--card-bg);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-    
-    .project-image {
-      height: 200px;
-      overflow: hidden;
-    }
-    
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    
-    .project-card:hover .project-image img {
-      transform: scale(1.1);
-    }
-    
-    .project-content {
-      padding: 25px;
-    }
-    
-    .project-title {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: var(--text-color);
-    }
-    
-    .project-description {
-      color: var(--secondary-text);
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-    
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .tech-tag {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-    }
-    
-    .project-links {
-      display: flex;
-      gap: 15px;
-    }
-    
-    .btn-sm {
-      padding: 8px 15px;
-      font-size: 0.9rem;
-    }
-    
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--primary-color);
-      color: var(--primary-color);
-    }
-    
-    .btn-outline:hover {
-      background-color: var(--primary-color);
-      color: white;
-    }
-    
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  `]
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.css' 
 })
 export class ProjectsComponent {
   private translationService = inject(TranslationService);
@@ -204,5 +69,13 @@ export class ProjectsComponent {
   
   translate(key: string): string {
     return this.translationService.translate(key);
+  }
+
+  trackByTitle(index: number, project: Project): string {
+    return project.title;
+  }
+
+  trackByTech(index: number, technology: string): string {
+    return technology;
   }
 }
