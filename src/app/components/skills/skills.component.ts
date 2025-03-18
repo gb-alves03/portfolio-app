@@ -16,112 +16,8 @@ interface Skill {
   selector: 'app-skills',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <section id="skills" class="section skills-section">
-      <div class="container">
-        <h2 class="section-title">{{ translate('skills.title') }}</h2>
-        <p class="section-description">
-          {{ translate('skills.description') }}
-        </p>
-        <p class="hover-instruction">
-          <i class="fas fa-info-circle"></i> {{ translate('skills.hover') }}
-        </p>
-        
-        <div class="skills-grid">
-          @for (skill of skills; track skill.name) {
-            <div class="skill-card">
-              <div class="skill-icon" [style.color]="skill.color">
-                <i [class]="skill.icon"></i>
-              </div>
-              <h3 class="skill-name">{{ skill.name }}</h3>
-              <div class="skill-description">
-                <p>{{ skill.description[currentLang] }}</p>
-              </div>
-            </div>
-          }
-        </div>
-      </div>
-    </section>
-  `,
-  styles: [`
-    .skills-section {
-      background-color: var(--card-bg);
-    }
-    
-    .hover-instruction {
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--secondary-text);
-      font-style: italic;
-    }
-    
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 30px;
-    }
-    
-    .skill-card {
-      background-color: var(--bg-color);
-      border-radius: 8px;
-      padding: 30px 20px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 180px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .skill-icon {
-      font-size: 3rem;
-      margin-bottom: 15px;
-      transition: all 0.3s ease;
-    }
-    
-    .skill-name {
-      font-size: 1.2rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    
-    .skill-description {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var(--primary-color);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      opacity: 0;
-      transform: translateY(100%);
-      transition: all 0.3s ease;
-      border-radius: 8px;
-    }
-    
-    .skill-card:hover .skill-description {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .skill-card:hover .skill-icon,
-    .skill-card:hover .skill-name {
-      transform: translateY(-100px);
-    }
-    
-    @media (max-width: 768px) {
-      .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      }
-    }
-  `]
+  templateUrl: './skills.component.html',
+  styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
   private translationService = inject(TranslationService);
@@ -210,5 +106,9 @@ export class SkillsComponent {
   
   translate(key: string): string {
     return this.translationService.translate(key);
+  }
+
+  trackBySkillName(index: number, skill: Skill): string {
+    return skill.name;
   }
 }

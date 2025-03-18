@@ -1,0 +1,23 @@
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <h2 class="section-title">{{ translate('skills.title') }}</h2>
+        <p class="section-description">
+            {{ translate('skills.description') }}
+        </p>
+        <p class="hover-instruction">
+            <i class="fas fa-info-circle"></i> {{ translate('skills.hover') }}
+        </p>
+
+        <div class="skills-grid">
+            <div *ngFor="let skill of skills; trackBy: trackBySkillName" class="skill-card">
+                <div class="skill-icon" [style.color]="skill.color">
+                    <i [class]="skill.icon"></i>
+                </div>
+                <h3 class="skill-name">{{ skill.name }}</h3>
+                <div class="skill-description">
+                    <p>{{ skill.description[currentLang] }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
