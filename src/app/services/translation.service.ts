@@ -140,8 +140,8 @@ export class TranslationService {
       'pt-BR': 'ENVIAR'
     },
     'footer.copyright': {
-      'en-US': 'Copyright © 2025. All rights reserved.',
-      'pt-BR': 'Copyright © 2025. Todos os direitos reservados.'
+      'en-US': 'Copyright © 2025 Gabriel Alves. All rights reserved.',
+      'pt-BR': 'Copyright © 2025 Gabriel Alves. Todos os direitos reservados.'
     }
   };
 

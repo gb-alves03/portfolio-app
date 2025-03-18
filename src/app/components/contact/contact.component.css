@@ -14,13 +14,6 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.contact-section-description {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 10px 0;
-}
-
 .form-group {
     margin-bottom: 25px;
 }
