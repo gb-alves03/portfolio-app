@@ -11,7 +11,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 - TypeScript
 - SCSS para estilização
 - Angular Router para navegação entre páginas
-- Deploy no GitHub Pages
+- Deploy no Vercel
 
 ### **Backend (Spring Boot + Java Mail Sender)**
 
